@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var currying_1 = require("./currying");
+var binarySearch_1 = require("./binarySearch");
 var App = /** @class */ (function () {
     function App() {
     }
     /** Entry point of our app */
     App.start = function () {
-        var currying = new currying_1.Currying();
-        currying.start();
+        var binarySearch = new binarySearch_1.BinarySearch();
+        console.log(binarySearch.search(1, [0, 1, 2]));
     };
     return App;
 }());
