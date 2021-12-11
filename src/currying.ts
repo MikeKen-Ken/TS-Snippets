@@ -4,7 +4,7 @@ export class Currying {
         console.log(fun(1)(2)(6));
     }
 
-    private curry(fun: Function): Function {
+    curry(fun: Function): Function {
         return function curried(...arg: number[]) {
             if (arg.length >= fun.length) {
                 return fun(...arg);
@@ -16,7 +16,7 @@ export class Currying {
         };
     }
 
-    private sum(a: number, b: number, c: number): number {
+    sum(a: number, b: number, c: number): number {
         return a + b + c;
     }
 }

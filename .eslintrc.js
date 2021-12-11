@@ -26,16 +26,16 @@ module.exports = {
         '@typescript-eslint/no-empty-function': 'off',
         '@typescript-eslint/no-inferrable-types': 'off',
         '@typescript-eslint/explicit-function-return-type': [
-            'error',
+            'off',
             {
                 allowExpressions: true
             }
         ],
         '@typescript-eslint/explicit-member-accessibility': 'off',
         '@typescript-eslint/no-non-null-assertion': 'error',
-        '@typescript-eslint/camelcase': 'off',
-        '@typescript-eslint/no-var-requires': 'off',
-        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/camelcase': 'error',
+        '@typescript-eslint/no-var-requires': 'error',
+        '@typescript-eslint/no-explicit-any': 'error',
         'no-console': 'off',
         '@typescript-eslint/indent': ['off', 4, { SwitchCase: 1 }],
         'no-prototype-builtins': 'off'

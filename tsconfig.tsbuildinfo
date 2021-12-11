@@ -26,19 +26,24 @@
         "signature": "097a57355ded99c68e6df1b738990448e0bf170e606707df5a7c0481ff2427cd",
         "affectsGlobalScope": true
       },
+      "./src/linkedlist.ts": {
+        "version": "4125a9904145f93a054f6f0dd52dbc21cb60e2b9da373c9e0cb30d03bcd95728",
+        "signature": "5091603b760a083ca6fc7f7cecfd41b9920d13fdc799768508ff6047f08b7afe",
+        "affectsGlobalScope": false
+      },
+      "./src/app.ts": {
+        "version": "cfe0131961406c025987fa1eec083a25d8bc010d0353475ab0aeff6a1c7e4163",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
+        "affectsGlobalScope": false
+      },
       "./src/binarysearch.ts": {
         "version": "befb3a10bf710e62182e576defa50dacaab7fd9a55fbafb8fb98c96508bfc7a0",
         "signature": "b043efb32e0bba9a7c79491f5d00c16db33e5fb06d5e1afc7140e6b97e65f332",
         "affectsGlobalScope": false
       },
-      "./src/app.ts": {
-        "version": "2715f2efff590b2daef7efd31fa93ca198364d51a237427f7a1b861dcb9a619c",
-        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
-        "affectsGlobalScope": false
-      },
       "./src/currying.ts": {
-        "version": "77fa112b6899fbc7a8cee927218387796ee7e722e8bfd642a1f6ab2253458693",
-        "signature": "1f6d39257678c12ffc2338b8190770f09292cd0a82056e941cc20684932062a5",
+        "version": "80722a5b9934b4d713f1534fa5151658d2f53e7577c7e915fe879aa00aa6f603",
+        "signature": "b2f02d7c2f5ab728c91ae595d8e7a772ef1d718437650377d0f91299de427cb6",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/eslint-visitor-keys/index.d.ts": {
@@ -63,7 +68,7 @@
     },
     "referencedMap": {
       "./src/app.ts": [
-        "./src/binarysearch.ts"
+        "./src/linkedlist.ts"
       ]
     },
     "exportedModulesMap": {},
@@ -77,7 +82,8 @@
       "./node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
       "./src/app.ts",
       "./src/binarysearch.ts",
-      "./src/currying.ts"
+      "./src/currying.ts",
+      "./src/linkedlist.ts"
     ]
   },
   "version": "3.9.10"

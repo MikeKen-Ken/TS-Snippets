@@ -1,10 +1,4 @@
 export class BinarySearch {
-    /**
-     *
-     * @param target target number
-     * @param arr number arr, have sorted
-     * @returns the number's index
-     */
     public search(target: number, arr: number[]): number {
         if (arr.length == 1) {
             return 0;
