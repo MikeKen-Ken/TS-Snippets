@@ -43,9 +43,11 @@ export class LinkedList {
         count++;
         return count;
     }
+
     public getHead() {
         return this.head;
     }
+
     public getLast() {
         let node = this.head;
         while (node.next !== null) {

@@ -1,32 +1,34 @@
 export class BinarySearch {
-    public search(target: number, arr: number[]): number {
-        if (arr.length == 1) {
+    public search(targetData: number, data: number[]): number {
+        if (data.length === 1) {
             return 0;
-        } else {
-            if (arr.length == 2) {
-                return arr[0] == target ? 0 : arr[1] == target ? 1 : -1;
-            }
         }
-        let low = 0;
-        let high = arr.length - 1;
-        let mid = Math.ceil((high - low) / 2);
-        let searchSize = high - low;
+        if (data.length === 2) {
+            return data[0] === targetData ? 0 : data[1] === targetData ? 1 : -1;
+        }
+
+        let startIndex = 0;
+        let endIndex = data.length - 1;
+        let midIndex = Math.ceil((endIndex - startIndex) / 2);
+        let searchSize = endIndex - startIndex;
+
         while (searchSize > 1) {
-            searchSize = high - low;
-            if (arr[mid] == target) {
-                return mid;
-            } else if (arr[mid] > target) {
-                if (arr[low] == target) {
-                    return low;
+            searchSize = endIndex - startIndex;
+            if (data[midIndex] === targetData) {
+                return midIndex;
+            }
+            if (data[midIndex] > targetData) {
+                if (data[startIndex] === targetData) {
+                    return startIndex;
                 }
-                high = mid;
-                mid = Math.ceil((mid - low) / 2);
+                endIndex = midIndex;
+                midIndex = Math.ceil((midIndex - startIndex) / 2);
             } else {
-                if (arr[high] == target) {
-                    return high;
+                if (data[endIndex] === targetData) {
+                    return endIndex;
                 }
-                low = mid;
-                mid = low + Math.ceil((high - low) / 2);
+                startIndex = midIndex;
+                midIndex = startIndex + Math.ceil((endIndex - startIndex) / 2);
             }
         }
         return -1;

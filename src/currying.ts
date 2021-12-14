@@ -1,22 +1,22 @@
 export class Currying {
     public start(): void {
-        const fun = this.curry(this.sum);
+        const fun = this.curry(this.sumNumber);
         console.log(fun(1)(2)(6));
     }
 
     curry(fun: Function): Function {
-        return function curried(...arg: number[]) {
-            if (arg.length >= fun.length) {
-                return fun(...arg);
+        return function curried(...args: number[]) {
+            if (args.length >= fun.length) {
+                return fun(...args);
             } else {
-                return function(...a: number[]) {
-                    return curried(...arg.concat(a));
+                return function(...arg: number[]) {
+                    return curried(...args.concat(arg));
                 };
             }
         };
     }
 
-    sum(a: number, b: number, c: number): number {
+    sumNumber(a: number, b: number, c: number): number {
         return a + b + c;
     }
 }
