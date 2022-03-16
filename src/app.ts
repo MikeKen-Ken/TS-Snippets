@@ -1,12 +1,13 @@
-import { LinkedList } from './linkedList';
-
+import chalk from 'chalk';
 class App {
-    /** Entry point of our app */
-    public static start(): void {
-        const arr: (number | string)[] = [1, 2, 5, '555', 3, 69, 8, 4];
-        const linkedList = new LinkedList(arr);
-        console.log(linkedList.getLast());
+    public start(): void {
+        this.testLiterType(false);
+    }
+
+    private testLiterType(type: 'left' | true): void {
+        console.log(chalk.yellow(`${type}`));
     }
 }
 
-App.start();
+const app = new App();
+app.start();
