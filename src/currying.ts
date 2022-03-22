@@ -4,12 +4,12 @@ export class Currying {
         console.log(fun(1)(2)(6));
     }
 
-    curry(fun: Function): Function {
+    curry(fun: (...args) => number): any {
         return function curried(...args: number[]) {
             if (args.length >= fun.length) {
                 return fun(...args);
             } else {
-                return function(...arg: number[]) {
+                return function (...arg: number[]) {
                     return curried(...args.concat(arg));
                 };
             }

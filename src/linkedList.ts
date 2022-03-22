@@ -6,7 +6,7 @@ class ListNode {
         this.next = null;
     }
 
-    setNext(next: ListNode) {
+    setNext(next: ListNode): void {
         this.next = next;
     }
 }
@@ -19,8 +19,8 @@ export class LinkedList {
         this.initData();
     }
 
-    initData() {
-        const nodeArr = this.listData.map(data => {
+    initData(): void {
+        const nodeArr = this.listData.map((data) => {
             return new ListNode(data);
         });
         this.head = nodeArr[0];
@@ -29,11 +29,11 @@ export class LinkedList {
         }
     }
 
-    public clear() {
+    public clear(): void {
         this.head = null;
     }
 
-    public length() {
+    public length(): number {
         let count = 0;
         let node = this.head;
         while (node.next !== null) {
@@ -44,23 +44,23 @@ export class LinkedList {
         return count;
     }
 
-    public getHead() {
+    public getHead(): any {
         return this.head;
     }
 
-    public getLast() {
+    public getLast(): ListNode {
         let node = this.head;
         while (node.next !== null) {
             node = node.next;
         }
         return node;
     }
-    public pop() {}
-    public push() {}
-    public shift() {}
-    public unshift() {}
-    public delete() {}
-    public find() {}
+    public pop(): void {}
+    public push(): void {}
+    public shift(): void {}
+    public unshift(): void {}
+    public delete(): void {}
+    public find(): void {}
 }
 
 type dataType = number | string;

@@ -1,4 +1,4 @@
-export function binarySearch(list, item) {
+export function binarySearch(list, item): number {
     let low = 0;
     let high = list.length - 1;
 

@@ -9,7 +9,7 @@ export class BST {
         this.right = null;
     }
 
-    insert(value) {
+    insert(value): void {
         if (value <= this.value) {
             if (!this.left) {
                 this.left = new BST(value);
@@ -25,25 +25,23 @@ export class BST {
         }
     }
 
-    contains(value) {
-        if (value === this.value) {
-            return true;
-        }
+    contains(value): boolean {
         if (value < this.value) {
             if (!this.left) {
                 return false;
             }
             return this.left.contains(value);
-        }
-        if (value > this.value) {
+        } else if (value > this.value) {
             if (!this.right) {
                 return false;
             }
             return this.right.contains(value);
+        } else {
+            return true;
         }
     }
 
-    dft(iteratorFunc, order) {
+    dft(iteratorFunc, order): void {
         if (order === 'pre-order') {
             iteratorFunc(this.value);
         }
@@ -65,7 +63,7 @@ export class BST {
         }
     }
 
-    bft(iteratorFunc) {
+    bft(iteratorFunc): void {
         const queue = [this.left, this.right];
         while (queue.length) {
             const treeNode = queue.shift();
@@ -79,7 +77,7 @@ export class BST {
         }
     }
 
-    removeNode(value) {
+    removeNode(value): BST {
         if (value == this.value) {
             if (!this.left && !this.right) {
                 return null;
@@ -97,13 +95,14 @@ export class BST {
         } else {
             this.right = this.right.removeNode(value);
         }
+        return this;
     }
 
-    getMinVal() {
+    getMinVal(): number {
         return this.left ? this.left.getMinVal() : this.value;
     }
 
-    getMaxVal() {
+    getMaxVal(): number {
         return this.right ? this.left.getMaxVal() : this.value;
     }
 }
