@@ -1,9 +1,5 @@
 class App {
-    public start(): void {
-        // console.log('???????');
-        // const node = AVLTree.insert(new Node(15), 10);
-        // console.log(node);
-    }
+    public start(): void {}
 }
 
 const app = new App();
