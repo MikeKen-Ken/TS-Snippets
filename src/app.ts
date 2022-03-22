@@ -1,11 +1,13 @@
-import chalk from 'chalk';
+import { BST } from './buildBST';
 class App {
     public start(): void {
-        this.testLiterType(false);
-    }
-
-    private testLiterType(type: 'left' | true): void {
-        console.log(chalk.yellow(`${type}`));
+        const bst = new BST(14);
+        bst.insert(1);
+        bst.insert(5);
+        bst.insert(30);
+        bst.insert(2);
+        bst.removeNode(5);
+        console.log(bst);
     }
 }
 
