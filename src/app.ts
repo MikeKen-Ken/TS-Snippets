@@ -1,5 +1,7 @@
 class App {
-    public start(): void {}
+    public start(): void {
+        console.log('>>>>');
+    }
 }
 
 const app = new App();

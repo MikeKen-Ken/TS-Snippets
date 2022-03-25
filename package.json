@@ -5,7 +5,8 @@
   "scripts": {
     "build": "rollup --config ./rollup.config.js",
     "test": "cross-env TS_NODE_PROJECT='test/tsconfig.test.json' mocha -t 2000 test/**/**.test.ts",
-    "cover": "nyc --reporter=html yarn run test"
+    "cover": "nyc --reporter=html yarn run test",
+    "start": "node dist/index.js"
   },
   "husky": {
     "hooks": {
