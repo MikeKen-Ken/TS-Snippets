@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sources":["../../src/app.ts"],"sourcesContent":[null],"names":["App","prototype","start","console","log"],"mappings":"cAMY,IANZ,WAAA,SAAAA,KAIA,OAHWA,EAAAC,UAAAC,MAAP,WACIC,QAAQC,IAAI,SAEnBJ,OAGGE"}
+{"version":3,"file":"index.js","sources":["../src/app.ts"],"sourcesContent":[null],"names":["App","prototype","start","console","log"],"mappings":"cAMY,IANZ,WAAA,SAAAA,KAIA,OAHWA,EAAAC,UAAAC,MAAP,WACIC,QAAQC,IAAI,SAEnBJ,OAGGE"}
