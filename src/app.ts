@@ -1,6 +1,9 @@
+import { Currying } from './currying';
+
 class App {
     public start(): void {
-        console.log('>>>>');
+        const c = new Currying();
+        c.start();
     }
 }
 

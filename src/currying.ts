@@ -4,7 +4,9 @@ export class Currying {
         console.log(fun(1)(2)(6));
     }
 
-    curry(fun: (...args) => number): any {
+    curry(
+        fun: (...args: any[]) => number
+    ): (...args: number[]) => number | any {
         return function curried(...args: number[]) {
             if (args.length >= fun.length) {
                 return fun(...args);
